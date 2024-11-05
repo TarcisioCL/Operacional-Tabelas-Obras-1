@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Setor Obras | CLF</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <header class="header">
+            <nav class="header-nav">
+                <div class="menu-toggle" onclick="abreSidebar()">
+                    <div class="hamburguer">
+                        <div class="linecenter"></div>
+                    </div>
+                </div>
+                <div class="header-titulo">    
+                    <h1>Operacional</h1>
+                    <p>Setor Obras, Aguas e Energia</p>
+                </div>
+            </nav>
+            <div class="header-form-button" onclick="formAdicionar()">
+                <div class="button-cruz">
+                    <div class="eixo1"></div>
+                    <div class="eixo2"></div>
+                </div>
+            </div>
+        </header>
+
+        <main id="container">
+            <aside id="aside">
+                <h3>OBRAS</h3>
+                <nav class="nav-aside">
+                    <ul>
+                        <li><a href="#" onclick="tituloTabela('Obras em Execução')">Execução</a></li>
+                        <li><a href="#" onclick="tituloTabela('Obras Confirmadas')">Confirmadas</a></li>
+                        <li><a href="#" onclick="tituloTabela('Obras Finalizadas')">Finalizadas</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <section id="tabela">
+                <div class="tabela-header">
+                    <h2 id="tabela-titulo">Obras em Execução</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th >Area</th>
+                            <th >Setor</th>
+                            <th >Execução</th>
+                            <th >Obra</th>
+                            <th >Estado</th>   
+                            <th >Inicio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Area">F2</td>
+                            <td data-label="Setor">Obras</td>
+                            <td data-label="Execução">Fausto</td>
+                            <td data-label="Obra">Casa Gerador</td>
+                            <td data-label="Estado">Em Execução</td>   
+                            <td data-label="Inicio">15/5/2024</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Area">ALUZ</td>
+                            <td data-label="Setor">Aguas</td>
+                            <td data-label="Execução">Lucio</td>
+                            <td data-label="Obra">Barragem Represa</td>
+                            <td data-label="Estado">Em Execução</td>   
+                            <td data-label="Inicio">25/8/2024</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Area">NCS</td>
+                            <td data-label="Setor">Energia</td>
+                            <td data-label="Execução">Jose Ricardo</td>
+                            <td data-label="Obra">Casa Gerador</td>
+                            <td data-label="Estado">Em Execução</td>   
+                            <td data-label="Inicio">25/7/2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <form id="form">
+
+                <div class="form-box">
+                    <h3 class="form-header">Adicionar Nova Obra</h3>
+
+                    <div class="form-container">
+
+                        <div class="form-input" id="form_area">
+                            <label for="area">Área:</label>
+                            <input type="text" id="area" list="areas">
+                            <datalist id="areas">
+                                <option value="ALUZ"></option>
+                                <option value="VC"></option>
+                                <option value="CM"></option>
+                                <option value="F1"></option>
+                                <option value="F3"></option>
+                                <option value="MA"></option>
+                                <option value="TIRM"></option>
+                                <option value="F2"></option>
+                                <option value="TDOSOL"></option>
+                            </datalist>
+                        </div>
+
+                        <div class="form-input" id="form_setor">
+                            <label for="setor">Setor:</label>
+                            <input type="text" id="setor" list="setores">
+                            <datalist id="setores">
+                                <option value="Obras"></option>
+                                <option value="Agua"></option>
+                                <option value="Energia"></option>
+                                <option value="Radios"></option>
+                                <option value="Internet"></option>
+                            </datalist>
+                        </div>
+                        
+                        <div class="form-input" id="form_execucao">
+                            <label for="execucao">Execução(mão e obra):</label>
+                            <input type="text" id="execucao">
+                        </div>
+
+                        <div class="form-input" id="form_obra">
+                            <label for="obra">Nome da Obra:</label>
+                            <input type="text" id="obra">
+                        </div>
+
+
+                        <div class="form-input" id="form_estado">
+                            <label for="estado">Estado da Obra:</label>
+                            <input type="text" id="setor" list="estado">
+                            <datalist id="estado">
+                                <option value="Confirmada"></option>
+                                <option value="Em Execução"></option>
+                            </datalist>
+                        </div>
+                
+                        <div class="form-input" id="form_inicio">
+                            <label for="inicio">Início:</label>
+                            <input type="date" id="inicio">
+                        </div>
+
+                    </div>
+
+                    <div class="form-btn">
+                        <button type="button" onclick="fechar()">Cancel</button>
+                        <button type="submit">Acpetar</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
